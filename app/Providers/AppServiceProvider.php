@@ -6,6 +6,7 @@ use App\Models\matakuliah;
 use App\Models\User;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
         //
         // Share `matakuliah` with all views so layout/components don't get undefined variable errors.
         // Use a composer to avoid calling the DB when running certain CLI tasks.
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
         View::composer('*', function ($view) {
             // Safely attempt to fetch matakuliah; in some CLI contexts the DB may not be available.
             try {

@@ -14,7 +14,6 @@ document.addEventListener("livewire:navigated", () => {
         }
     }
 });
-
 document.addEventListener("upload-tugas", function (event) {
     const kodeTugas = event.detail.data;
     console.log("Open modal, kode tugas:", kodeTugas);
