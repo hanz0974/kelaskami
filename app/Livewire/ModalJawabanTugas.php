@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\JawabanTugas;
+use App\Models\jawabanTugas;
 use Livewire\Attributes\On;
 
 class ModalJawabanTugas extends Component
