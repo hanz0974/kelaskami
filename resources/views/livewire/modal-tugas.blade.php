@@ -21,6 +21,7 @@
             </div>
             <!-- Modal body -->
             <form wire:submit.prevent="savetugas">
+                @csrf
                 <input type="hidden" value="">
                 <div class="grid gap-4 sm:grid-cols-2">
                     <input wire:model="kode_mk" class="hidden">
