@@ -26,8 +26,8 @@ class absens extends Model
     public function matakuliah()
     {
         return $this->hasOneThrough(
-            Matakuliah::class,
-            TokenAbsen::class,
+            matakuliah::class,
+            tokenAbsen::class,
             'id',             // PK di token_absen
             'kode_mk',        // PK di matakuliah
             'token_absen_id', // FK di absen
@@ -45,6 +45,6 @@ class absens extends Model
 
     public function tokenAbsen()
     {
-        return $this->belongsTo(TokenAbsen::class, 'token_absen_id');
+        return $this->belongsTo(tokenAbsen::class, 'token_absen_id');
     }
 }

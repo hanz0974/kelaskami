@@ -31,7 +31,7 @@ class ModalJawabanTugas extends Component
 
         $path = $this->jawaban_file->store('jawaban_tugas', 'public');
 
-        JawabanTugas::create([
+        jawabanTugas::create([
             'kode_tugas'   => $this->kode_tugas,
             'nim'          => auth()->user()->mahasiswa->nim,
             'deskripsi'    => $this->deskripsi,

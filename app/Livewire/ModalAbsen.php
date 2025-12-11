@@ -41,7 +41,7 @@ class ModalAbsen extends Component
             'valid_until' => 'required|date|after:valid_from',
         ];
         $validatedData = $this->validate($rules);
-        TokenAbsen::create([
+        tokenAbsen::create([
             'kode_mk' => $validatedData['kode_mk'],
             'jadwal' => $validatedData['jadwal'],
             'token' => $validatedData['token'],
@@ -60,7 +60,7 @@ class ModalAbsen extends Component
 
     public function updatedKodeMk($value)
     {
-        $lastJadwal = TokenAbsen::where('kode_mk', $value)->max('jadwal');
+        $lastJadwal = tokenAbsen::where('kode_mk', $value)->max('jadwal');
 
         if ($lastJadwal) {
             // Ekstrak angka dari string "Pertemuan X"

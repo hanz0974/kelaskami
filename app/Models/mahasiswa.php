@@ -38,7 +38,7 @@ class mahasiswa extends Model
     }
     public function jawabanTugas()
     {
-        return $this->hasMany(JawabanTugas::class, 'nim', 'nim');
+        return $this->hasMany(jawabanTugas::class, 'nim', 'nim');
     }
 
     public function absens()

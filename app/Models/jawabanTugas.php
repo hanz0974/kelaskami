@@ -22,7 +22,7 @@ class jawabanTugas extends Model
     }
     public function mahasiswa()
     {
-        return $this->belongsTo(Mahasiswa::class, 'nim', 'nim');
+        return $this->belongsTo(mahasiswa::class, 'nim', 'nim');
     }
 
     public function tugas()

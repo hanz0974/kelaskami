@@ -18,7 +18,7 @@ class tokenAbsen extends Model
 
     public function matakuliah()
     {
-        return $this->belongsTo(Matakuliah::class, 'kode_mk', 'kode_mk');
+        return $this->belongsTo(matakuliah::class, 'kode_mk', 'kode_mk');
     }
 
     public function scopeSearch($query, $value)

@@ -40,7 +40,7 @@ class Absen extends Component
         $nim = Auth::user()->mahasiswa->nim;
 
         // cek apakah sudah pernah absen
-        $sudahAbsen = Absens::where('nim', $nim)
+        $sudahAbsen = absens::where('nim', $nim)
             ->where('token_absen_id', $token->id)
             ->exists();
 

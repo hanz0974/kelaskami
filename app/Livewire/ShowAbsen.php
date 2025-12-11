@@ -27,9 +27,9 @@ class ShowAbsen extends Component
 
     public function render()
     {
-        $token = TokenAbsen::with('matakuliah')->findOrFail($this->tokenId);
+        $token = tokenAbsen::with('matakuliah')->findOrFail($this->tokenId);
 
-        $absens = Absens::where('token_absen_id', $this->tokenId)
+        $absens = absens::where('token_absen_id', $this->tokenId)
             ->searchMahasiswa($this->search)
             ->with('mahasiswa')
             ->paginate(10);
