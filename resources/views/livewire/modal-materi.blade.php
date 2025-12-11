@@ -21,7 +21,6 @@
             </div>
             <!-- Modal body -->
             <form wire:submit.prevent="saveMateri">
-                @csrf
                 <input type="hidden" value="">
                 <div class="grid gap-4 sm:grid-cols-2">
                     <div>
