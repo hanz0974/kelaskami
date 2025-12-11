@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\absens;
-use App\Models\Matakuliah;
+use App\Models\matakuliah;
 use App\Models\tokenAbsen;
 use Illuminate\Support\Str;
 use Livewire\Attributes\On;
