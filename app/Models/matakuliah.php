@@ -33,7 +33,7 @@ class matakuliah extends Model
 
     public function tokenAbsens()
     {
-        return $this->hasMany(TokenAbsen::class, 'kode_mk', 'kode_mk');
+        return $this->hasMany(tokenAbsen::class, 'kode_mk', 'kode_mk');
     }
 
     public function scopeSearch($query, $value)
@@ -45,7 +45,7 @@ class matakuliah extends Model
     {
         return $this->hasManyThrough(
             absens::class,
-            TokenAbsen::class,
+            tokenAbsen::class,
             'kode_mk',        // FK di token_absen
             'token_absen_id', // FK di absen
             'kode_mk',        // PK di matakuliah
